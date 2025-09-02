@@ -1,0 +1,26 @@
+.container {
+    width: 62vw;
+    margin: 3.5em auto;
+    display: flex;
+    gap: 16px;
+}
+
+.container div {
+    flex-grow: 2;
+}
+
+.lista-cards {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 24px;
+    margin: 0;
+    padding: 0;
+}
+
+.lista-cards li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: block;
+}
