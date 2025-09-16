@@ -1,12 +1,30 @@
-# React + Vite
+# CodeConnect
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+O **CodeConnect** é uma aplicação web que exibe uma lista de publicações de desenvolvedores. 
+O projeto foi desenvolvido com **React + Vite**, consumindo dados de uma **API fake** hospedada no [My JSON Server](https://my-json-server.typicode.com/MonicaHillman/codeconnect-api/publicacoes).
 
-Currently, two official plugins are available:
+## 🚀 Tecnologias Utilizadas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React** - Criação de componentes reutilizáveis.
+- **Vite** - Ferramenta de build rápida e simples.
+- **Fetch API** - Consumo de dados externos.
+- **CSS** - Estilização personalizada.
 
-## Expanding the ESLint configuration
+## 📌 Funcionalidades
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Lista publicações em formato de cards.
+- Exibe título, resumo, imagem de capa, autor, ícones ilustrativos para visualização do código, compartilhamentos e comentários (sem funcionalidade implementada).
+- Componentes reutilizáveis para:
+  - Barra de pesquisa  
+  - Filtros  
+  - Ordenação  
+  - Sidebar  
+  - Card de publicação
+
+## 🖼️ Demonstração
+
+<div style="text-align: center;">
+  <img src="assets/Aplicacao.gif" alt="Gif da aplicação" width="600"/>
+</div>
+
+🔗 [Clique aqui para ver no GitHub Pages](https://yasmim123456.github.io/codeconnect-feed/)
