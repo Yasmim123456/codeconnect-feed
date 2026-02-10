@@ -1,7 +1,6 @@
 # CodeConnect
 
-O **CodeConnect** é uma aplicação web que exibe uma lista de publicações de desenvolvedores. 
-O projeto foi desenvolvido com **React + Vite**, consumindo dados de uma **API fake** hospedada no [My JSON Server](https://my-json-server.typicode.com/MonicaHillman/codeconnect-api/publicacoes).
+O CodeConnect é uma aplicação web **ilustrativa** que exibe uma lista de publicações de desenvolvedores. O projeto foi desenvolvido com **React + Vite**, com foco na **componentização e organização de código**.
 
 ## 🚀 Tecnologias Utilizadas
 
@@ -29,9 +28,10 @@ O projeto foi desenvolvido com **React + Vite**, consumindo dados de uma **API f
   - Filtros  
   - Ordenação  
   - Sidebar  
-  - Card de publicação
+  - Card  
 
-  
+**Observação:** A aplicação é ilustrativa. Funcionalidades como compartilhamentos, comentários e ordenação não possuem lógica implementada.
+
 ---
 
 ## 🧠 Aprendizados
@@ -44,9 +44,10 @@ O projeto foi desenvolvido com **React + Vite**, consumindo dados de uma **API f
 
 ---
 
-## ℹ️ Observação
+## ℹ️ Sobre o desenvolvimento
 
-O projeto foi iniciado a partir de um curso de React, porém funcionalidades como a lógica de filtros, remoção individual, limpeza de filtros e a filtragem dinâmica dos cards foram implementadas e adaptadas de forma independente, como parte do processo de aprendizado e aprofundamento na tecnologia.
+O projeto foi iniciado a partir de um curso de React.  
+No entanto, funcionalidades como a **lógica de filtros por tags**, **remoção individual**, **limpeza de filtros** e a **filtragem dinâmica dos cards** foram implementadas e adaptadas de forma independente, como parte do processo de aprendizado e aprofundamento na tecnologia.
 
 ## 🖼️ Demonstração
 
