@@ -5,21 +5,48 @@ O projeto foi desenvolvido com **React + Vite**, consumindo dados de uma **API f
 
 ## 🚀 Tecnologias Utilizadas
 
-- **React** - Criação de componentes reutilizáveis.
-- **Vite** - Ferramenta de build rápida e simples.
+- **React** - Criação de componentes reutilizáveis e gerenciamento de estado.
+- **Vite** - Ambiente de desenvolvimento rápido e otimizado.
+- **JavaScript (ES6+)** - Lógica da aplicação.
 - **Fetch API** - Consumo de dados externos.
-- **CSS** - Estilização personalizada.
+- **CSS** - Estilização da interface.
 
 ## 📌 Funcionalidades
 
-- Lista publicações em formato de cards.
-- Exibe título, resumo, imagem de capa, autor, ícones ilustrativos para visualização do código, compartilhamentos e comentários (sem funcionalidade implementada).
-- Componentes reutilizáveis para:
+- Listagem de publicações em formato de cards.
+- Consumo de dados de uma API externa.
+- Filtro dinâmico de publicações por tags, com atualização em tempo real da lista de cards.
+- Adição e remoção de filtros individualmente.
+- Opção de limpar todos os filtros ativos.
+- Exibição de:
+  - título 
+  - resumo 
+  - imagem de capa
+  - autor
+  - indicadores visuais de código, compartilhamentos e comentários (apenas ilustrativos).
+- Componentização da interface, incluindo:
   - Barra de pesquisa  
   - Filtros  
   - Ordenação  
   - Sidebar  
   - Card de publicação
+
+  
+---
+
+## 🧠 Aprendizados
+
+- Uso de `useState` e `useEffect`.
+- Renderização condicional e listas com `map`.
+- Filtragem de dados com base em propriedades da API.
+- Normalização de dados para comparação de filtros.
+- Organização e reutilização de componentes React.
+
+---
+
+## ℹ️ Observação
+
+O projeto foi iniciado a partir de um curso de React, porém funcionalidades como a lógica de filtros, remoção individual, limpeza de filtros e a filtragem dinâmica dos cards foram implementadas e adaptadas de forma independente, como parte do processo de aprendizado e aprofundamento na tecnologia.
 
 ## 🖼️ Demonstração
 

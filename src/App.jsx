@@ -8,24 +8,53 @@ import Card from './componentes/Card'
 
 function App() {
   const [dados, setDados] = useState([]);
+  const [termoPesquisa, setTermoPesquisa] = useState('');
+  const [filtros, setFiltros] = useState([
+    { id: crypto.randomUUID(), valor: 'frontend' },
+    { id: crypto.randomUUID(), valor: 'programacao' }
+  ]);
+
+  function adicionarFiltro() {
+    const termoNormalizado = termoPesquisa.trim().toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace('-','')
+
+    if (!termoNormalizado) {
+    setTermoPesquisa('')
+    return
+  }
+
+   if (filtros.some(filtro => filtro.valor === termoNormalizado)) {
+    setTermoPesquisa('')
+    return
+  }
+
+  setFiltros([...filtros, { id: crypto.randomUUID(), valor: termoNormalizado }])
+
+  setTermoPesquisa('')
+  }
+
   useEffect(()=> {
     fetch('https://my-json-server.typicode.com/MonicaHillman/codeconnect-api/publicacoes')
     .then(resposta => resposta.json())
     .then(dados => setDados(dados))
-  }, [])
+  }, []);
 
+  const dadosFiltrados = filtros.length === 0 ? dados : dados.filter (item => filtros.some(filtro => item.tags.includes(filtro.valor)));
+   
   return (
     <div className='container'>
       <Sidebar />
       <div>
-        <BarraDePesquisa />
-        <Filtro />
+        <BarraDePesquisa 
+          termoPesquisa={termoPesquisa}
+          setTermoPesquisa={setTermoPesquisa}
+          onEnter={adicionarFiltro}
+        />
+        <Filtro filtros={filtros} setFiltros={setFiltros}/>
         <Ordenacao />
         <ul className='lista-cards'>
-          {dados ? dados.map((item, index) => (
-            <li key={index}>
+          {dadosFiltrados.map(item => (
+            <li key={item.id}>
               <Card 
-              id={item.id}
               imagemUrl={item.imagem_capa}
               titulo={item.titulo}
               resumo={item.resumo}
@@ -35,7 +64,7 @@ function App() {
               usuario={item.usuario}
               />
             </li>
-          )) : null}
+          ))}
         </ul>
       </div>
     </div>

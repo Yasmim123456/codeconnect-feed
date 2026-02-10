@@ -1,21 +1,32 @@
 import Close from './assets/close.svg'
 import './styles.css'
 
-export default function Filtro() {
+export default function Filtro({ filtros, setFiltros }) {
+
+  function limparTudo() {
+    setFiltros([])
+  }
+
+  function removerFiltro(filtroRemovido) {
+    setFiltros (filtros.filter(filtro => filtro.id !== filtroRemovido))
+  }
+
     return(
         <section className="container-filtro">
             <ul>
-                <li>
-                    Front-end
-                    <img src={Close} alt='Fechar'/>
-                </li>
-                <li>
-                    Programação
-                    <img src={Close} alt='Fechar'/>
-                </li>
+                {filtros.map((filtro) => (
+                    <li key={filtro.id}>
+                        {filtro.valor}
+                        <img 
+                        src={Close} 
+                        alt='Fechar'
+                        onClick={() => removerFiltro(filtro.id)} />
+                    </li>
+                ))}
             </ul>
 
-            <button>Limpar tudo</button>
+            <button onClick={limparTudo}>Limpar tudo</button>
         </section>
     )
+
 }
